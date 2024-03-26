@@ -32,39 +32,34 @@
             android:layout_marginTop="4dp"
             android:layout_marginLeft="23dp"/>
 
+    <!-- Botão de Adicionar -->
+    <Button
+            android:id="@+id/addButton"
+            android:layout_width="119dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_rectangle_white"
+            android:text="Adicionar"
+            android:textColor="@color/blue" android:layout_alignParentEnd="true"
+            android:layout_marginEnd="18dp" android:layout_marginBottom="10dp" android:layout_marginTop="3dp"
+            android:layout_below="@+id/subtitleTextView"/>
+
     <!-- Campo de Texto -->
     <EditText
             android:id="@+id/editText"
             android:layout_width="367dp"
             android:layout_height="wrap_content"
-            android:layout_below="@id/subtitleTextView"
-            android:layout_marginTop="16dp"
             android:layout_marginLeft="23dp"
             android:background="@drawable/rounded_rectangle_white"
             android:hint="Digite algo"
             android:padding="8dp" android:minHeight="48dp" android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp" android:layout_marginBottom="20dp" android:importantForAutofill="no"/>
-
-    <!-- Botão de Adicionar -->
-
-    <Button
-            android:id="@+id/addButton"
-            android:layout_width="142dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/editText"
-            android:layout_marginTop="5dp"
-            android:background="@drawable/rounded_rectangle_white"
-            android:text="Adicionar"
-            android:textColor="@color/blue" android:layout_alignParentEnd="true"
-            android:layout_marginEnd="20dp" android:layout_marginBottom="10dp"/>
+            android:layout_marginEnd="20dp" android:layout_marginBottom="20dp" android:importantForAutofill="no"
+            android:layout_marginTop="12dp" android:layout_below="@+id/addButton"
+            android:layout_centerHorizontal="true"/>
 
     <!-- Lista de Itens -->
-
     <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="468dp"
-            android:layout_below="@id/addButton"
-            android:layout_marginTop="22dp"
+            android:layout_height="632dp"
             android:background="@android:color/white"
             android:layout_alignParentStart="true"
             android:layout_marginStart="0dp"
@@ -72,7 +67,8 @@
             android:layout_marginEnd="0dp"
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="0dp"
-            tools:ignore="SpeakableTextPresentCheck">
+            tools:ignore="SpeakableTextPresentCheck" android:layout_marginTop="16dp"
+            android:layout_below="@+id/editText">
 
         <LinearLayout
                 android:id="@+id/listLayout"
