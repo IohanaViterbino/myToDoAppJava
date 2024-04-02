@@ -35,8 +35,9 @@ Para executar este aplicativo, siga as etapas abaixo:
 
 ## Autores
 
-- [@FlávioAlexandre](https://github.com/ClarkAshida) - Ideia e prototipação
-- [@IohanaMaria](https://github.com/IohanaViterbino) - Dev do app em java
+- [@FlávioAlexandre](https://github.com/ClarkAshida) 
+- [@IohanaMaria](https://github.com/IohanaViterbino) 
+- [@AlanFernandes](https://github.com/AlanFernandesXavier)
 
 ## Licença
 
