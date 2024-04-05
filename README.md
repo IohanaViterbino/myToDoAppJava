@@ -38,6 +38,7 @@ Para executar este aplicativo, siga as etapas abaixo:
 - [@FlávioAlexandre](https://github.com/ClarkAshida) 
 - [@IohanaMaria](https://github.com/IohanaViterbino) 
 - [@AlanFernandes](https://github.com/AlanFernandesXavier)
+- ChatGPT
 
 ## Licença
 
