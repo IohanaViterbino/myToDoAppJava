@@ -55,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
         if (!texto.isEmpty()) {
             Task task = new Task();
             task.setTexto(texto);
+            task.setIsChecked(false);
             long id = dao.inserir(task);
 
             // Limpa o EditText após salvar a tarefa
@@ -97,6 +98,7 @@ public class MainActivity extends AppCompatActivity {
             checkParams.addRule(RelativeLayout.ALIGN_PARENT_LEFT);
             checkParams.setMargins(15,15,0,15);
             checkBox.setLayoutParams(checkParams);
+            checkBox.setChecked(task.isChecked()); // Define o estado do CheckBox de acordo com o valor armazenado no banco de dados
             itemLayout.addView(checkBox);
 
             Button deleteButton = new Button(this);
@@ -123,6 +125,10 @@ public class MainActivity extends AppCompatActivity {
             checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 @Override
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    // Atualiza o estado do CheckBox no banco de dados quando o usuário marcá-lo ou desmarcá-lo
+                    task.setIsChecked(isChecked);
+                    dao.atualizar(task);
+                    // Atualiza a cor do texto do CheckBox de acordo com o estado
                     if (isChecked) {
                         checkBox.setTextColor(ContextCompat.getColor(MainActivity.this, R.color.red));
                     } else {

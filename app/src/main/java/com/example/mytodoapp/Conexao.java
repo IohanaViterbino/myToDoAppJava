@@ -21,7 +21,8 @@ public class Conexao extends SQLiteOpenHelper {
         // Executando uma instrução SQL para criar a tabela 'tarefas', se ela ainda não existir
         db.execSQL("CREATE TABLE IF NOT EXISTS tarefas (" +
                 "id INTEGER PRIMARY KEY AUTOINCREMENT," + // Coluna ID (chave primária)
-                "texto TEXT)"); // Coluna texto
+                "texto TEXT," + // Coluna texto
+                "isChecked INTEGER DEFAULT 0)"); // Coluna isChecked
     }
 
     // Método chamado quando é necessário atualizar o banco de dados para uma nova versão
