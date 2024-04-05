@@ -14,7 +14,6 @@ public class MainActivity extends AppCompatActivity {
     private EditText editText;
     private LinearLayout listLayout;
     private TaskDAO dao;
-    private List<Task> tarefas;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void listarTarefas() {
         // Obtenha todas as tarefas do banco de dados
-        tarefas = dao.obterTodos();
+        List<Task> tarefas = dao.obterTodos();
 
         // Limpe a lista de tarefas exibida na interface do usuário
         listLayout.removeAllViews();
@@ -96,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
             );
             checkParams.addRule(RelativeLayout.CENTER_VERTICAL);
             checkParams.addRule(RelativeLayout.ALIGN_PARENT_LEFT);
-            checkParams.setMargins(15,15,0,15);
+            checkParams.setMargins(15,15,97,15);
             checkBox.setLayoutParams(checkParams);
             checkBox.setChecked(task.isChecked()); // Define o estado do CheckBox de acordo com o valor armazenado no banco de dados
             itemLayout.addView(checkBox);
